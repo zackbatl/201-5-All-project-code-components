@@ -6,14 +6,16 @@ CREATE TABLE Users (
   userName TEXT NOT NULL,   
   pass TEXT NOT NULL,             
   email TEXT NOT NULL,         
-  PRIMARY KEY(id, userName)        
+  PRIMARY KEY(id, userName)
+  p_ids INT[]
 );
 
 CREATE TABLE user_memes(
   Id SERIAL PRIMARY KEY,
   img IMAGE,
   tags TEXT[],
-  upload_time DATETIME
+  upload_time DATETIME,
+  dankScore INT
 );
 
 INSERT INTO Users (userName, pass, email)
