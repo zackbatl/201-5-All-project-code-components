@@ -16,8 +16,8 @@
 </head>
 <body style="background-color:black">
 
-	<!--	
-		Creating the non-sticky horizontal navbar. Has a search bar, login button, signup button(fa-user icon), and profile button	
+	<!--
+		Creating the non-sticky horizontal navbar. Has a search bar, login button, signup button(fa-user icon), and profile button
 	-->
 	<div>
 		<nav class="navbar navbar-expand-sm justify-content-end">
@@ -85,7 +85,6 @@
   font-family: Permanent Marker, serif;
   padding: 7em 0em 13em;
 }
-
 .kir-r1 {
   line-height: 1em;
     text-align: center;
@@ -93,13 +92,11 @@
   font-weight: 100;
   color: #fff;
 }
-
 .kir-r2 {
   line-height: 1em;
   margin-top: -2em;
   font-size: 5.5em;
 }
-
 </style>
 
 	<style>
@@ -126,9 +123,26 @@
 	</center>
 	  <img src="https://i1.wp.com/ladnow.com/wp-content/uploads/2018/11/offensive-dank-memes-2.jpg?resize=1024%2C1024&ssl=1" alt="Flowers in Chania" width="400" height="400" class = "center">
 	  <div class="card-body">
-	    
+
 	    <center>
-	    <a href="#" class="btn btn-primary">D A N K</a>
+
+				<button class="btn btn-primary" onclick="updateValueByNumBounded(1)">D A N K</button>
+				<span id="changeNumberBounded">0</span>
+				<script>
+					function updateValueByNumBounded(changeBy){
+						var number = document.getElementById("changeNumberBounded").innerHTML;//retrieve the current number
+						number= parseInt(number) + changeBy;//Increase/Decrease by passed in parameter.
+						if(number > 5)
+						{//Ensure we don't go above 10
+							number = 5;
+						}
+
+						document.getElementById("changeNumberBounded").innerHTML = number;//Update to show the new number value
+					}
+				</script>
+
+
+
 	</center>
 			  </div>
 	</div>
@@ -144,7 +158,7 @@
 	</center>
 	  <img src="https://piximus.net/media2/48518/fresh-dank-memes-to-offend-and-amuse-you-2.jpg" alt="Flowers in Chania" width="400" height="400" class = "center">
 	  <div class="card-body">
-	    
+
 	    <center>
 	    <a href="#" class="btn btn-primary">D A N K</a>
 	</center>
@@ -164,7 +178,7 @@
 	<br>
 
 	  <div class="card-body">
-	    
+
 	    <center>
 	    <a href="#" class="btn btn-primary">D A N K</a>
 	</center>
@@ -183,7 +197,7 @@
 	  		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTKMmBOQZSnYsYTsH4faiqaNV4op-pivKUQeKZt4FR9IAT_6cr5A&s" alt="Flowers in Chania" width="400" height="400" class = "center">
 
 	  <div class="card-body">
-	    
+
 	    <center>
 	    <a href="#" class="btn btn-primary">D A N K</a>
 	</center>
@@ -203,7 +217,7 @@
 
 
 	  <div class="card-body">
-	    
+
 	    <center>
 	    <a href="#" class="btn btn-primary">D A N K</a>
 	</center>
@@ -255,8 +269,3 @@
 
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </html>
-
-
-
-
-
