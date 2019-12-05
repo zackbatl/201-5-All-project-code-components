@@ -12,14 +12,14 @@ const dbConfig = {
 
 var db = pg(dbConfig);
 
-//takes in image id retruns amount of likes
+//takes in image id returns amount of likes
 pop_likes(id){
   var query = 'SELECT dankScore FROM user_memes WHERE img_id =' + id +';';
 
   db.any(query)
     .then(function(rows){
       var result = rows[0];
-      // UPDATE HTML OF PAGE
+      document.getElementById(id).SOMETHING.innerHTML = result; // WRONG
     })
     .catch(function(err){
       console.log('error runnning pop query', err);
@@ -27,13 +27,13 @@ pop_likes(id){
     return result;
 }
 
-inc_likes(id){
-  var current = pop_likes(id);
+inc_likes(id){ // uses incoming image id to increment likes in data base
+  var current = pop_likes(id); // grabs current value out of database
   current++;
   var query = 'UPDATE user_memes SET dankScore =' + current + ' WHERE img_id =' + id + ';'
   db.any(query)
     .then(function(rows){
-      // UPDATE HTML OF THE PAGE
+      // do we need to update the HTML here aswell or its that already handled?
     })
     .catch(function(err){
       console.log("error inc likes", err);
@@ -59,7 +59,7 @@ find_trending(){ // returns array of image_ids of top ten in like count
 
 print_cards(img_ids) // generates defult cards for all img_ids
 
-search(input){ // returns array of matching image ids
+search(input){ // returns array of image ids from images with matching tabs
 
   var query = 'SELECT img_id FROM user_memes WHERE tags <@' + input + ';';
   var i;
@@ -78,7 +78,7 @@ search(input){ // returns array of matching image ids
 
 }
 
-pop_users(){ // returns array of user_ids of users with the most liked post
+pop_users(){ // returns array of to ten user_ids of users with the most liked post
   var users = [];
   var query = 'SELECT ';
 }
