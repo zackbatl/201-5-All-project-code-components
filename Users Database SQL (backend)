@@ -13,7 +13,8 @@ CREATE TABLE user_memes(
   Id SERIAL PRIMARY KEY,
   img IMAGE,
   tags TEXT[],
-  upload_time DATETIME
+  upload_time DATETIME,
+  dankScore INT
 );
 
 INSERT INTO Users (userName, pass, email)
