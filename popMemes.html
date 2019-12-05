@@ -9,20 +9,16 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-	<title>Popular Memes</title>
+	<link href='https://fonts.googleapis.com/css?family=Permanent+Marker:400' rel='stylesheet' type='text/css'>
 
-	<style>
-		.vl {
-			border-right: 2px solid lightgrey;
-			margin-top: 10px;
-			margin-bottom: 10px;
-			height: 700px;
-			/*position: absolute;*/
-		}
-	</style>
+<title>Memento</title>
+
 </head>
-
 <body style="background-color:black">
+
+	<!--
+		Creating the non-sticky horizontal navbar. Has a search bar, login button, signup button(fa-user icon), and profile button
+	-->
 	<div>
 		<nav class="navbar navbar-expand-sm justify-content-end">
 			<ul class="navbar-nav">
@@ -36,7 +32,7 @@
 				    <a class="nav-link" href="#signup" style="color:teal">Sign Up</a>
 				</li>
 				<li class="nav-item">
-				    <a class="nav-link fa fa-user" href="#login" style="font-size:20px;color:teal"></a>
+				    <a class="nav-link fa fa-user" href="#profile" style="font-size:20px;color:teal"></a>
 				</li>
 				<li class="nav-item">
 				    <button type="button" class="btn btn-bg-black" style="color:teal" data-toggle="modal" data-target="#popUpWindow">Login</button>
@@ -69,19 +65,208 @@
 							</div>
 						</div>
 					</div>
+
 				</li>
 			</ul>
 		</nav>
 	</div>
 
+<div class="kir">
+  <h1 class="kir-r1">Memento</h1>
+  <h2 class="kir-r2">The Dankest Memes</h2>
+</div>
+
+<style type="text/css">
+.kir {
+  color: #d44b15;
+  text-align: center;
+  background-color: black;
+  font-size: 1em;
+  font-family: Permanent Marker, serif;
+  padding: 7em 0em 13em;
+}
+.kir-r1 {
+  line-height: 1em;
+    text-align: center;
+  font-size: 10em;
+  font-weight: 100;
+  color: #fff;
+}
+.kir-r2 {
+  line-height: 1em;
+  margin-top: -2em;
+  font-size: 5.5em;
+}
+</style>
+
+	<style>
+		.vl {
+			border-right: 2px solid lightgrey;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			height: 700px;
+			/*position: absolute;*/
+		}
+	</style>
+
+	<!--
+		Example cards/content for the homepage.
+	-->
+
+	<br>
+
+
+	<center>
+	<div class="card bg-dark text-white" style="width:400px">
+		<center>
+		<h4 class="card-title">LOL</h4>
+	</center>
+	  <img src="https://i1.wp.com/ladnow.com/wp-content/uploads/2018/11/offensive-dank-memes-2.jpg?resize=1024%2C1024&ssl=1" alt="Flowers in Chania" width="400" height="400" class = "center">
+	  <div class="card-body">
+
+	    <center>
+
+				<button class="btn btn-primary" onclick="updateValueByNumBounded(1)">D A N K</button>
+				<span id="changeNumberBounded">0</span>
+				<script>
+					function updateValueByNumBounded(changeBy){
+						var number = document.getElementById("changeNumberBounded").innerHTML;
+						number= parseInt(number) + changeBy;
+						if(number > 5)
+						{
+							number = 5;
+						}
+						document.getElementById("changeNumberBounded").innerHTML = number;
+					}
+				</script>
+
+
+
+	</center>
+			  </div>
+	</div>
+	</center>
+
+
+	<br>
+
+	<center>
+	<div class="card bg-dark text-white" style="width:400px">
+		<center>
+		<h4 class="card-title">This is me</h4>
+	</center>
+	  <img src="https://piximus.net/media2/48518/fresh-dank-memes-to-offend-and-amuse-you-2.jpg" alt="Flowers in Chania" width="400" height="400" class = "center">
+	  <div class="card-body">
+
+	    <center>
+
+				<button class="btn btn-primary" onclick="updateValueByNumBounded(1)">D A N K</button>
+				<span id="changeNumberBounded">0</span>
+				<script>
+					function updateValueByNumBounded(changeBy){
+						var number = document.getElementById("changeNumberBounded").innerHTML;
+						number= parseInt(number) + changeBy;
+						if(number > 5)
+						{
+							number = 5;
+						}
+						document.getElementById("changeNumberBounded").innerHTML = number;
+					}
+				</script>
+
+	</center>
+			  </div>
+	</div>
+	</center>
+
+
+	<br>
+
+	<center>
+	<div class="card bg-dark text-white" style="width:400px">
+		<center>
+		<h4 class="card-title">say no kids</h4>
+	</center>
+	  <img src="http://www.wheninmanila.com/wp-content/uploads/2017/01/sinulog-dank-memes-10.png" alt="Flowers in Chania" width="400" height="400" class = "center">
+	<br>
+
+	  <div class="card-body">
+
+	    <center>
+	    <a href="#" class="btn btn-primary">D A N K</a>
+	</center>
+			  </div>
+	</div>
+	</center>
+
+
+	<br>
+
+	<center>
+	<div class="card bg-dark text-white" style="width:400px">
+		<center>
+		<h4 class="card-title">haha funny me me</h4>
+	</center>
+	  		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTKMmBOQZSnYsYTsH4faiqaNV4op-pivKUQeKZt4FR9IAT_6cr5A&s" alt="Flowers in Chania" width="400" height="400" class = "center">
+
+	  <div class="card-body">
+
+	    <center>
+	    <a href="#" class="btn btn-primary">D A N K</a>
+	</center>
+			  </div>
+	</div>
+	</center>
+
+
+	<br>
+
+	<center>
+	<div class="card bg-dark text-white" style="width:400px">
+		<center>
+		<h4 class="card-title">so anyways i started blasting</h4>
+	</center>
+	  			<img src="http://californiamemes.com/wp-content/uploads/2019/09/24-Dank-Memes-Reddit-1.jpg" alt="Flowers in Chania" width="400" height="400" class = "center">
+
+
+	  <div class="card-body">
+
+	    <center>
+	    <a href="#" class="btn btn-primary">D A N K</a>
+	</center>
+			  </div>
+	</div>
+	</center>
+
+	<br>
+
+	<center>
+	<div class="card bg-dark text-white" style="width:400px">
+		<center>
+		<h4 class="card-title">s m a l l b r a i n</h4>
+	</center>
+	  			<img src="https://i.ytimg.com/vi/gc9TI7ISosU/maxresdefault.jpg" alt="Flowers in Chania" width="400" height="400" class ="center">
+	    <center>
+	    <a href="#" class="btn btn-primary" style="margin-top:15px;margin-bottom:20px">D A N K</a>
+	</center>
+			  </div>
+	</div>
+	</center>
+
+
+
+	<!--
+		Creating the vertical "sticky" navbar for with trending memes, popular memes, and popular users links, as well as a homepage link(fa-anchor icon)
+	-->
 
 
 	<div class="col-1 vl fixed-top">
 		<nav class="nav flex-column">
 			<ul class="navbar-nav" style="margin-top:20px">
 				<li class="nav-item">
-					<a class="nav-link" style="color:lightgray;margin-top:20px" href="homePage.html">Home</a>
-						<!-- <i class="fas fa-anchor" style="font-size:20px;color:lightgray"></i> -->
+										<a class="nav-link" style="color:lightgray;margin-top:20px" href="homePage.html"><img src="logo.png" alt="Memento" height="42" width ="42"></a>
+					<a class="nav-brand" href="homePage.html">
+
 					</a>
 				</li>
 			    <li class="nav-item">
@@ -95,9 +280,6 @@
 	</div>
 
 
-	<div class="container">
-		<h1 style="color:lightgray">Popular Memes</h1>
-	</div>
-</body>
 
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </html>
