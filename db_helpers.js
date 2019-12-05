@@ -40,7 +40,7 @@ inc_likes(id){ // uses incoming image id to increment likes in data base
     })
 }
 
-find_trending(){ // returns array of image_ids of top ten in like count
+find_pop(){ // returns array of image_ids of top ten in like count
   var img_ids = [];
   var query = 'SELECT img_id FROM user_memes ORDER BY dankScore DESC LIMIT 10' // SLOW AND BAD
   var i;
@@ -57,7 +57,25 @@ find_trending(){ // returns array of image_ids of top ten in like count
     })
 }
 
-print_cards(img_ids) // generates defult cards for all img_ids
+
+create_card(id, title, src, alt){ // generates defult cards for all img_ids
+  var count = pop_likes(id);
+
+  var card = '<div class="card bg-dark text-white" style="width:400px" id = '+ id '>\n';
+  card += '<center>\n';
+  card += '<h4 class="card-title">' + title + '</h4>\n';
+  card += '</center>\n';
+  card += '<img src=' + src + ' alt=' + alt + ' width="400" height="400" class = "center">\n';
+  card += '<div class="card-body">\n';
+  card += '<center>\n';
+  card += '<button class="btn btn-primary" onclick="inc_likes(' + id + ')">D A N K</button>\n';
+  card += '<span id = "changeNumberBounded">'+ count +'</span>\n';
+  card += '</center>\n';
+  card += '</div>\n';
+  card += '</div>\n';
+  card += '</center>';
+
+}
 
 search(input){ // returns array of image ids from images with matching tabs
 
