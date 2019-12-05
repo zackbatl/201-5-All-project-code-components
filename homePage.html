@@ -130,14 +130,13 @@
 				<span id="changeNumberBounded">0</span>
 				<script>
 					function updateValueByNumBounded(changeBy){
-						var number = document.getElementById("changeNumberBounded").innerHTML;//retrieve the current number
-						number= parseInt(number) + changeBy;//Increase/Decrease by passed in parameter.
+						var number = document.getElementById("changeNumberBounded").innerHTML;
+						number= parseInt(number) + changeBy;
 						if(number > 5)
-						{//Ensure we don't go above 10
+						{
 							number = 5;
 						}
-
-						document.getElementById("changeNumberBounded").innerHTML = number;//Update to show the new number value
+						document.getElementById("changeNumberBounded").innerHTML = number;
 					}
 				</script>
 
@@ -160,7 +159,21 @@
 	  <div class="card-body">
 
 	    <center>
-	    <a href="#" class="btn btn-primary">D A N K</a>
+
+				<button class="btn btn-primary" onclick="updateValueByNumBounded(1)">D A N K</button>
+				<span id="changeNumberBounded">0</span>
+				<script>
+					function updateValueByNumBounded(changeBy){
+						var number = document.getElementById("changeNumberBounded").innerHTML;
+						number= parseInt(number) + changeBy;
+						if(number > 5)
+						{
+							number = 5;
+						}
+						document.getElementById("changeNumberBounded").innerHTML = number;
+					}
+				</script>
+
 	</center>
 			  </div>
 	</div>
@@ -252,7 +265,7 @@
 			<ul class="navbar-nav" style="margin-top:20px">
 				<li class="nav-item">
 					<a class="nav-brand" href="homePage.html">
-						<i class="fas fa-anchor" style="font-size:20px;color:lightgray"></i>
+						
 					</a>
 				</li>
 			    <li class="nav-item">
