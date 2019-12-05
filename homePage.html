@@ -9,24 +9,9 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-	<title>Mememento</title>
+	<link href='https://fonts.googleapis.com/css?family=Permanent+Marker:400' rel='stylesheet' type='text/css'>
 
-	<style>
-		.vl {
-			border-right: 2px solid lightgrey;
-			margin-top: 10px;
-			margin-bottom: 10px;
-			height: 700px;
-			/*position: absolute;*/
-		}
-
-		.center {
-		  display: block;
-		  margin-left: auto;
-		  margin-right: auto;  
-		}
-
-	</style>
+<title>Memento</title>
 
 </head>
 <body style="background-color:black">
@@ -50,18 +35,89 @@
 				    <a class="nav-link fa fa-user" href="#profile" style="font-size:20px;color:teal"></a>
 				</li>
 				<li class="nav-item">
-				    <a class="nav-link" href="#login" style="color:teal">Login</a>
+				    <button type="button" class="btn btn-bg-black" style="color:teal" data-toggle="modal" data-target="#popUpWindow">Login</button>
+
+					<div class="modal fade" id="popUpWindow">
+						<div class="modal-dialog">
+							<div class="modal-content border-2 border-light" style="background-color:black">
+
+								<div class="modal-header">
+									<h3 class="modal-title" style="color:white;">Log In</h3>
+									<button type="button" class="close" data-dismiss="modal" style="color:white">&times;</button>
+								</div>
+
+								<div class="modal-body">
+									<form role="form">
+										<div class="form-group">
+											<input type="email" class="form-control" placeholder="Email">
+										</div>
+										<div class="form-group">
+											<input type="password" class="form-control" placeholder="Password">
+										</div>
+										<button class="btn btn-primary btn-block">Submit</button>
+									</form>
+								</div>
+
+								<div class="modal-footer">
+									<a href="#signupPage">Sign Up</a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
 				</li>
 			</ul>
 		</nav>
 	</div>
 
+<div class="kir">
+  <h1 class="kir-r1">Memento</h1>
+  <h2 class="kir-r2">The Dankest Memes</h2>
+</div>
+
+<style type="text/css">
+.kir {
+  color: #d44b15;
+  text-align: center;
+  background-color: black;
+  font-size: 1em;
+  font-family: Permanent Marker, serif;
+  padding: 7em 0em 13em;
+}
+
+.kir-r1 {
+  line-height: 1em;
+    text-align: center;
+  font-size: 10em;
+  font-weight: 100;
+  color: #fff;
+}
+
+.kir-r2 {
+  line-height: 1em;
+  margin-top: -2em;
+  font-size: 5.5em;
+}
+
+</style>
+
+	<style>
+		.vl {
+			border-right: 2px solid lightgrey;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			height: 700px;
+			/*position: absolute;*/
+		}
+	</style>
 
 	<!--
 		Example cards/content for the homepage.
 	-->
 
 	<br>
+
 
 	<center>
 	<div class="card bg-dark text-white" style="width:400px">
@@ -186,9 +242,6 @@
 					</a>
 				</li>
 			    <li class="nav-item">
-			      <a class="nav-link" style="color:lightgray;margin-top:20px" href="TrendingPage.html">Trending Memes</a>
-			    </li>
-			    <li class="nav-item">
 			      <a class="nav-link" style="color:lightgray;margin-top:20px" href="PopMemes.html">Popular Memes</a>
 			    </li>
 			    <li class="nav-item">
@@ -202,4 +255,8 @@
 
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </html>
+
+
+
+
 
