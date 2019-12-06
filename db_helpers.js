@@ -44,7 +44,7 @@ inc_likes(id){ // uses incoming image id to increment likes in data base
     })
 }
 
-find_pop(){ // returns array of image_ids of top ten in like count
+find_popular(){ // returns array of image_ids of top ten in like count
   var img_ids = [];
   var query = 'SELECT img_id FROM user_memes ORDER BY dankScore DESC LIMIT 10' // SLOW AND BAD
   var i;
@@ -61,25 +61,60 @@ find_pop(){ // returns array of image_ids of top ten in like count
     })
 }
 
-
-find_trending(){
-  var img_ids = [];
-  var current_datetime = new Date();
-  var query = 'SELECT img_id FROM user_memes WHERE  ORDER BY dankScore DESC LIMIT 10' // SLOW AND BAD
+print_popular(){
+  var img_ids = find_popular();
+  var cards = [];
   var i;
+  var k;
+  for (i = 0; i<10; i++){ // load card array
+    k = img_ids[i];
+    card[i] = create_card(k, get_title(k), get_src(k), get_alt(k));
+  }
+
+  //print card array to the page
+  for (i = 0; i<10; i++){
+    document.getElementById('popBody').innerHTML += card[i];
+  }
+}
+
+get_title(id){
+  var query = 'SELECT title FROM user_memes WHERE id = ' + id + ';';
 
   db.any(query)
     .then(function(rows){
-      for(i=0;i<10;i++){
-        img_ids[i] = rows[i];
-      }
-      return img_ids;
+      var title = rows[0];
+      return title;
     })
     .catch(function(err){
-      console.log('error in find_trending', err);
+      console.log('error in get_title', err);
     })
 }
 
+get_alt(id){
+  var query = 'SELECT alt FROM user_memes WHERE id = ' + id + ';';
+
+  db.any(query)
+    .then(function(rows){
+      var title = rows[0];
+      return title;
+    })
+    .catch(function(err){
+      console.log('error in get_title', err);
+    })
+}
+
+get_src(id){
+  var query = 'SELECT src FROM user_memes WHERE id = ' + id + ';';
+
+  db.any(query)
+    .then(function(rows){
+      var src = rows[0];
+      return src;
+    })
+    .catch(function(err){
+      console.log('error in get_src', err);
+    })
+}
 
 create_card(id, title, src, alt){ // generates defult cards for all img_ids
   var count = pop_likes(id);
