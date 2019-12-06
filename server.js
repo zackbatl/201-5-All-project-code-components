@@ -36,7 +36,7 @@ app.get('/videoPage', function(req, res){
 app.get('/popMemes', function(req, res){
 	res.render('popMemes' , {
 		title: 'pop memes',
-	}
+	});
 });
 
 app.get('/uploadPage', function(req, res){
