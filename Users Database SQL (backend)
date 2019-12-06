@@ -14,7 +14,6 @@ CREATE TABLE user_memes(
   Id SERIAL PRIMARY KEY,
   title TEXT,
   src TEXT,
-  alt TEXT,
   tags TEXT[],
   upload_time DATETIME,
   dankScore INT
