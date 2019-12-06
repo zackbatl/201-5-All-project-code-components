@@ -1,99 +1,52 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="description" content="Creative Self-Made Webpage">
-	<meta name="author" content="Brendan Heaney">
-	<!--<meta http-equiv="refresh" content="30">-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<title>Sign Up Page</title>
-	<!--<base href="https://www.sophmore2page.html/otherpages" target="_blank"-->
-<script>document.createElement("tag1");</script>
-<style>
-	#mainbox {
-		background-image: url("RMNP_image.jpeg");
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-	
-	div.background {
-		margin: 75px 100px;
-		border: 4px solid black;
-		text-align: center;
-		background-color: lightblue;
-		opacity: 0.9;
-			
-	}
-	
-	div.transbox {
-		padding: 13.8% 0;
-		font-size: 16px;
-		outline-color: black;
-	}
-	
-	/*div.transb h1 {
-		padding: 10px;
-		text-align: center;
-		text-weight: bold;
-		font-size: 30px;
-		z-index: 1;
-		font-variant: small-caps;
-	}*/
-	
-	
-	.subbutton {
-		background-color: MediumSeaGreen;
-		border: none;
-		color: black;
-		float: center;
-		text-align: center;
-		border: 2px solid black;
-		margin: 20px 8px;
-		padding: 6px 15px;
-		transition-duration: 0.5s;
-		cursor: grab;
-	}
-	
-	.subbutton:hover {
-		background-color: black;
-		color: MediumTurquoise;
-		border: 2px solid MediumTurquoise;
-	}
-	
-	
-	.signupb {
-		color:black;
-		font-size:14px;
-		cursor: wait;
-	}
-	
-	
-</style>
-</head>
-<body id="mainbox">
-	<!-- form action="/action_page.sql" autocomplete="on"?> -->
-	<div class="background">
-		<center>
-		<h1 style="font-variant:small-caps">You gotta sign up buD</h1>
-		</center>
-	<div class="transbox">
-	<center>
-	<form action="/signup" method="post">
-		<label for="uname">Username:</label>
-		<input type="text" name="uname" placeholder="John_Doe" title="Username" autofocus required><br><br>
-		<label for="password">Password: </label>
-		<input type="password" name="passwrd" placeholder="Password" title="Password" autofocus required><br>
-        
-		<button class="subbutton" type="submit" style="margin-left:42px;margin-right:20px">Sign Up</button>
-		<a class="signupb" href="homePage.html">Home</a>
-	</form>
-	</center>
-	</div>
-	</div>
-	
-</body>
-</html>
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="description" content="Creative Self-Made Webpage"><meta name="author" content="Brendan Heaney"><!-- <meta http-equiv="refresh" content="30">--><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script><title>My Latest Webpage</title><!-- <base href="https://www.sophmore2page.html/otherpages" target="_blank"--><script>document.createElement("tag1");</script></head><body id="mainbox" style="background-image: url('https://media.giphy.com/media/JrTMRGVbcriWWGtpYs/giphy.gif');"><style>body {
+background-image: url('img_girl.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}</style><style>#mainbox {
+background-image: url("RMNP_image.jpeg");
+background-repeat: no-repeat;
+background-size: cover;
+}
+div.background {
+margin: 75px 100px;
+border: 4px solid black;
+text-align: center;
+background-color: lightblue;
+opacity: 0.9;
+}
+div.transbox {
+padding: 13.8% 0;
+font-size: 16px;
+outline-color: black;
+}
+/*div.transb h1 {
+padding: 10px;
+text-align: center;
+text-weight: bold;
+font-size: 30px;
+z-index: 1;
+font-variant: small-caps;
+}*/
+.subbutton {
+background-color: MediumSeaGreen;
+border: none;
+color: black;
+float: center;
+text-align: center;
+border: 2px solid black;
+margin: 20px 8px;
+padding: 6px 15px;
+transition-duration: 0.5s;
+cursor: grab;
+}
+.subbutton:hover {
+background-color: black;
+color: MediumTurquoise;
+border: 2px solid MediumTurquoise;
+}
+.signupb {
+color:black;
+font-size:14px;
+cursor: wait;
+}</style><!-- form action="/action_page.sql" autocomplete="on"?>--><div class="background"><center><h1 style="font-variant:small-caps">You gotta sign up buD</h1></center><div class="transbox"><center><form action="/signup" method="post"><label for="uname">Username:</label><input type="text" name="uname" placeholder="John_Doe" title="Username" autofocus="" required=""><br><br><label for="password">Password: </label><input type="password" name="passwrd" placeholder="Password" title="Password" autofocus="" required=""><br><button class="subbutton" type="submit" style="margin-left:42px;margin-right:20px">Sign Up</button><a class="signupb" href="homePage.html">Home</a></form></center></div></div></body></html>
