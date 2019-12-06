@@ -18,18 +18,19 @@ CREATE TABLE user_memes(
   dankScore INT
 );
 
-INSERT INTO Users (userName, pass, email)
-VALUES(‘baseballfan198’, ‘YahtzeeLife420911?’, ‘bdotadot5@yahoo.com’),
-('coolguy45', ‘P@ssw0rd’, ‘thisismyemail@gmail.com’)
-(‘Ahmed00’, ‘asaaahDude1!’, ‘ahmedsmith@hotmail.com’),
-(‘charlesmanson100’, ‘hotDoggy252!’,’ joeycommas@aol.com’)
+INSERT INTO user_memes (title, src, tags, dankScore)
+VALUES(‘nicuu’, ‘https://i.imgur.com/Fq1lMbo.png’, ‘sick’, 0),
+('thinky', ‘https://i.imgur.com/Fq1lMbo.png’, ‘dumb’, 12),
+(‘aaaaaaahhhh’, ‘https://i.imgur.com/Fq1lMbo.png’, ‘peace’, 17),
+(‘loser’, ‘https://i.imgur.com/Fq1lMbo.png’, 'amazingu',90),
+(‘i hate me’, ‘https://i.imgur.com/Fq1lMbo.png’,  'amazingue',60),
+(‘hell boy’, ‘https://i.imgur.com/Fq1lMbo.png’,’ 'amazingua'’,20),
+(‘sunny day’, ‘https://i.imgur.com/Fq1lMbo.png’,’ 'amazinguq'’,50),
+(‘beach mode’, ‘https://i.imgur.com/Fq1lMbo.png’,’ 'amazinguc'’,40),
+(‘no way jose’, ‘https://i.imgur.com/Fq1lMbo.png’,’ 'amazingub'’,150),
+(‘beat on the beat’, ‘https://i.imgur.com/Fq1lMbo.png’,’ 'amazinguw'’,10),
+(‘wowza’, ‘https://i.imgur.com/Fq1lMbo.png’,’ 'amazingut'’,924)
 ;
-
-INSERT INTO user_memes(img, tags, upload_time)
-VALUES(‘https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwj63YCr3MTlAhUIrZ4KHfLoDV4QjRx6BAgBEAQ&url=https%3A%2F%2Fwww.buzzfeed.com%2Fjennaguillaume%2Fmoth-memes&psig=AOvVaw0AHC0upBYx96E2hih5k66G&ust=1572550134573348’, ARRAY [‘Moth’, ‘Lamp’,’whowouldwin’], ‘2019-10-20 13:21:33’),
-(‘https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjug4X33sTlAhWSrZ4KHZHUADwQjRx6BAgBEAQ&url=https%3A%2F%2F8bitnerds.com%2Flife-is-soup-i-am-fork%2F&psig=AOvVaw0DBub2wrPdsdiiwBjHaSeA&ust=1572550941184790’, ARRAY [‘lifeissoup’,’fork’,’lifeissoupiamfork’,’sad’,’depressed’,’happyn’t’,’brainpower’], ‘2019-10-20 13:25:33’);
-
-
 
 
 
