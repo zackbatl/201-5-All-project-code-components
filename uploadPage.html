@@ -18,6 +18,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Permanent+Marker:400' rel='stylesheet' type='text/css'>
 
 	<title>Mememento</title>
 
@@ -33,26 +34,7 @@
 
 </head>
 <body style="background-color:black">
-	<div class="col-1 vl fixed-top">
-		<nav class="nav flex-column fixed-top">
-			<ul class="navbar-nav" style="margin-top:20px">
-				<li class="nav-item">
-					<a class="nav-brand" href="#">
-						<i class="fas fa-anchor" style="font-size:20px;color:lightgray"></i>
-					</a>
-				</li>
-			    <li class="nav-item">
-			      <a class="nav-link" style="color:lightgray;margin-top:20px" href="#">Trending Memes</a>
-			    </li>
-			    <li class="nav-item">
-			      <a class="nav-link" style="color:lightgray;margin-top:20px" href="#">Popular Memes</a>
-			    </li>
-			    <li class="nav-item">
-			      <a class="nav-link" style="color:lightgray;margin-top:20px" href="#">Popular Users</a>
-			    </li>
-			  </ul>
-		</nav>
-	</div>
+	
 
 		<nav class="navbar justify-content-end">
 			<form class="form-inline nav-item" action="#">
@@ -64,37 +46,98 @@
 		    <a class="nav-link" href="#" style="color:teal">Profile</a>
 		</nav>
 
-		<br>
-<center>
-<form class="md-form">
-  <div class="file-field">
-    <div class="z-depth-1-half mb-4">
-      <img src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg" class="img-fluid"/>
-        
+<div class="kir">
+  <h1 class="kir-r1">Memento</h1>
+  <h2 class="kir-r2">The Dankest Memes</h2>
+</div>
 
+<style type="text/css">
+.kir {
+  color: #d44b15;
+  text-align: center;
+  background-color: black;
+  font-size: 1em;
+  font-family: Permanent Marker, serif;
+  padding: 7em 0em 13em;
+}
 
-<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
-<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
-<meta charset=utf-8 />
-<title>JS Bin</title>
-<!--[if IE]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<style>
-  article, aside, figure, footer, header, hgroup, 
-  menu, nav, section { display: block;}
+.kir-r1 {
+  line-height: 1em;
+    text-align: center;
+  font-size: 10em;
+  font-weight: 100;
+  color: #fff;
+}
+
+.kir-r2 {
+  line-height: 1em;
+  margin-top: -2em;
+  font-size: 5.5em;
+}
+
 </style>
-	
-  <input type='file' onchange="readURL(this);" />
-    <img id="blah" src="#" alt="your image" style= />
-
-</div>
-</div>
+       
+	<center>
+<div class="card bg-white text-black" style="width:400px">
+		<form>
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submit">
 </form>
-
-
+  <div class="form-row align-items-center">
+    <div class="col-auto">
+    	<center>
+      <label class="sr-only" for="inlineFormInput">Title</label>
+      <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Title">
+  </center>
+    </div>
+    <div class="col-auto">
+      <label class="sr-only" for="inlineFormInputGroup">Tags</label>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">#</div>
+        </div>
+        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Tag">
+      </div>
+    </div>
+    
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </div>
+  </div>
+</form>
+			  </div>
+	
 </center>
+
+<div class="col-1 vl fixed-top">
+		<nav class="nav flex-column">
+			<ul class="navbar-nav" style="margin-top:20px">
+				<li class="nav-item">
+					<a class="nav-brand" href="homePage.html">
+						<i class="fas fa-anchor" style="font-size:20px;color:lightgray"></i>
+					</a>
+				</li>
+			    <li class="nav-item">
+			      <a class="nav-link" style="color:lightgray;margin-top:20px" href="PopMemes.html">Popular Memes</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" style="color:lightgray;margin-top:20px" href="PopUsers.html">Popular Users</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" style="color:lightgray;margin-top:20px" href="videoPage.html">Video Stream</a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" style="color:lightgray;margin-top:20px" href="uploadPage.html">Upload</a>
+			    </li>
+			  </ul>
+
+		</nav>
+	</div>
+	
+  
+
 
 
 
@@ -102,3 +145,4 @@
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
+
