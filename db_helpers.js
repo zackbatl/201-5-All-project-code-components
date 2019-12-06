@@ -68,7 +68,7 @@ print_popular(){
   var k;
   for (i = 0; i<10; i++){ // load card array
     k = img_ids[i];
-    card[i] = create_card(k, get_title(k), get_src(k), get_alt(k));
+    card[i] = create_card(k, get_title(k), get_src(k);
   }
 
   //print card array to the page
@@ -90,18 +90,6 @@ get_title(id){
     })
 }
 
-get_alt(id){
-  var query = 'SELECT alt FROM user_memes WHERE id = ' + id + ';';
-
-  db.any(query)
-    .then(function(rows){
-      var title = rows[0];
-      return title;
-    })
-    .catch(function(err){
-      console.log('error in get_title', err);
-    })
-}
 
 get_src(id){
   var query = 'SELECT src FROM user_memes WHERE id = ' + id + ';';
@@ -116,14 +104,14 @@ get_src(id){
     })
 }
 
-create_card(id, title, src, alt){ // generates defult cards for all img_ids
+create_card(id, title, src){ // generates defult cards for all img_ids
   var count = pop_likes(id);
 
   var card = '<div class="card bg-dark text-white" style="width:400px" id = '+ id '>\n';
   card += '<center>\n';
   card += '<h4 class="card-title">' + title + '</h4>\n';
   card += '</center>\n';
-  card += '<img src=' + src + ' alt=' + alt + ' width="400" height="400" class = "center">\n';
+  card += '<img src=' + src + ' width="400" height="400" class = "center">\n';
   card += '<div class="card-body">\n';
   card += '<center>\n';
   card += '<button class="btn btn-primary" onclick="inc_likes(' + id + ')">D A N K</button>\n';
