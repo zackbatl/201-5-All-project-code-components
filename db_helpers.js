@@ -73,7 +73,7 @@ print_popular(){
 
   //print card array to the page
   for (i = 0; i<10; i++){
-    document.getElementById('popBody').innerHTML += card[i];
+    document.getElementById('cardBodyId').innerHTML += card[i];
   }
 }
 
