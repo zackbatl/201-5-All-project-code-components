@@ -15,11 +15,12 @@ var db = pg(dbConfig);
 //takes in image id returns amount of likes
 pop_likes(id){
   var query = 'SELECT dankScore FROM user_memes WHERE img_id =' + id +';';
+  var btID = id + 'changeNumberBounded';
 
   db.any(query)
     .then(function(rows){
       var result = rows[0];
-      document.getElementById(id).SOMETHING.innerHTML = result; // WRONG
+      document.getElementById(btID).innerHTML = result; // WRONG?
     })
     .catch(function(err){
       console.log('error runnning pop query', err);
@@ -30,7 +31,9 @@ pop_likes(id){
 inc_likes(id){ // uses incoming image id to increment likes in data base
   var current = pop_likes(id); // grabs current value out of database
   current++;
+  
   var query = 'UPDATE user_memes SET dankScore =' + current + ' WHERE img_id =' + id + ';'
+
   db.any(query)
     .then(function(rows){
       // do we need to update the HTML here aswell or its that already handled?
@@ -88,7 +91,7 @@ create_card(id, title, src, alt){ // generates defult cards for all img_ids
   card += '<div class="card-body">\n';
   card += '<center>\n';
   card += '<button class="btn btn-primary" onclick="inc_likes(' + id + ')">D A N K</button>\n';
-  card += '<span id = "changeNumberBounded">'+ count +'</span>\n';
+  card += '<span id = "' + id + 'changeNumberBounded">'+ count +'</span>\n';
   card += '</center>\n';
   card += '</div>\n';
   card += '</div>\n';
