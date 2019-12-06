@@ -34,56 +34,9 @@ app.get('/videoPage', function(req, res){
 });
 
 app.get('/popMemes', function(req, res){
-  //print_popular();
-  var card = {
-    title0: '',
-    alt0: '',
-    src0: '',
-
-    title1: '',
-    alt1: '',
-    src1: '',
-
-    title2: '',
-    alt2: '',
-    src2: '',
-
-    title3: '',
-    alt3: '',
-    src3: '',
-
-    title4: '',
-    alt4: '',
-    src4: '',
-
-    title5: '',
-    alt5: '',
-    src5: '',
-
-    title6: '',
-    alt6: '',
-    src6: '',
-
-    title7: '',
-    alt7: '',
-    src7: '',
-
-    title8: '',
-    alt8: '',
-    src8: '',
-
-    title9: '',
-    alt9: '',
-    src9: '',
-  };
-
-  var card2 = create_json_card();
-  if (card2 != null){
-    res.render('popMemes', card2);
-  }
-  else {
-    res.render(popMemes, empty);
-  }
+	res.render('popMemes' , {
+		title: 'pop memes',
+	}
 });
 
 app.get('/uploadPage', function(req, res){
@@ -97,105 +50,6 @@ app.get('/signup', function(req,res){
     title: 'signup page',
   });
 });
-
-
-function find_popular(){ // returns array of image_ids of top ten in like count
-  var img_ids = [];
-  var query = 'SELECT img_id FROM user_memes ORDER BY dankScore DESC LIMIT 10' // SLOW AND BAD
-  var i;
-
-  db.any(query)
-    .then(function(rows){
-      for(i=0;i<10;i++){
-        img_ids[i] = rows[i];
-      }
-      return img_ids;
-    })
-    .catch(function(err){
-      console.log('error in find_trending', err);
-    })
-}
-
-function get_title(id){
-  var query = 'SELECT title FROM user_memes WHERE id = ' + id + ';';
-
-  db.any(query)
-    .then(function(rows){
-      var title = rows[0];
-      return title;
-    })
-    .catch(function(err){
-      console.log('error in get_title', err);
-    })
-}
-
-
-function get_src(id){
-  var query = 'SELECT src FROM user_memes WHERE id = ' + id + ';';
-
-  db.any(query)
-    .then(function(rows){
-      var src = rows[0];
-      return src;
-    })
-    .catch(function(err){
-      console.log('error in get_src', err);
-    })
-}
-
-function create_json_card(){
-  var img_ids = find_popular();
-
-  if (img_ids.length<10){
-    console.log('pop_query_failed')
-    return null;
-  }
-
-  var card = { // this is terrible
-    title0: get_title[img_ids[0]],
-    alt0: '',
-    src0: get_src[img_ids[0]],
-
-    title1: get_title[img_ids[1]],
-    alt1: '',
-    src1: get_src[img_ids[1]],
-
-    title2: get_title[img_ids[2]],
-    alt2: '',
-    src2: get_src[img_ids[2]],
-
-    title3: get_title[img_ids[3]],
-    alt3: '',
-    src3: get_src[img_ids[3]],
-
-    title4: get_title[img_ids[4]],
-    alt4: '',
-    src4: get_src[img_ids[4]],
-
-    title5: get_title[img_ids[5]],
-    alt5: '',
-    src5: get_src[img_ids[5]],
-
-    title6: get_title[img_ids[6]],
-    alt6: '',
-    src6: get_src[img_ids[6]],
-
-    title7: get_title[img_ids[7]],
-    alt7: '',
-    src7: get_src[img_ids[7]],
-
-    title8: get_title[img_ids[8]],
-    alt8: '',
-    src8: get_src[img_ids[8]],
-
-    title9: get_title[img_ids[9]],
-    alt9: '',
-    src9: get_src[img_ids[9]],
-
-  };
-
-  return card;
-}
 
 
 app.post('/signup', function(req, res)
