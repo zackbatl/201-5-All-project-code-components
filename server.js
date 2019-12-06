@@ -20,8 +20,11 @@ app.get('/videoPage', function(req, res){
 });
 
 app.get('/popMemes', function(req, res){
+  //print_popular();
   res.render('popMemes', {
-    title: 'Pop Memes',
+    src1: 'https://knowpathology.com.au/app/uploads/2018/07/Happy-Test-Screen-01-825x510.png',
+    alt1: 'pleasegod',
+    title1: "aaa"
   });
 });
 
