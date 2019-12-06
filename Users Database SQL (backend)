@@ -19,15 +19,15 @@ CREATE TABLE user_memes(
 );
 
 INSERT INTO user_memes (title, src, tags, dankScore)
-VALUES(‘nicuu’, ‘https://i.imgur.com/Fq1lMbo.png’, ‘sick’, 0),
+VALUES(‘nicuu’, ‘https://piximus.net/media2/48518/fresh-dank-memes-to-offend-and-amuse-you-2.jpg’, ‘sick’, 0),
 ('thinky', ‘https://i.imgur.com/Fq1lMbo.png’, ‘dumb’, 12),
-(‘aaaaaaahhhh’, ‘https://i.imgur.com/Fq1lMbo.png’, ‘peace’, 17),
+(‘aaaaaaahhhh’, ‘http://www.wheninmanila.com/wp-content/uploads/2017/01/sinulog-dank-memes-10.png’, ‘peace’, 17),
 (‘loser’, ‘https://i.imgur.com/Fq1lMbo.png’, 'amazingu',90),
-(‘i hate me’, ‘https://i.imgur.com/Fq1lMbo.png’,  'amazingue',60),
+(‘i hate me’, ‘https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTKMmBOQZSnYsYTsH4faiqaNV4op-pivKUQeKZt4FR9IAT_6cr5A&s’,  'amazingue',60),
 (‘hell boy’, ‘https://i.imgur.com/Fq1lMbo.png’,’ 'amazingua'’,20),
-(‘sunny day’, ‘https://i.imgur.com/Fq1lMbo.png’,’ 'amazinguq'’,50),
-(‘beach mode’, ‘https://i.imgur.com/Fq1lMbo.png’,’ 'amazinguc'’,40),
-(‘no way jose’, ‘https://i.imgur.com/Fq1lMbo.png’,’ 'amazingub'’,150),
+(‘sunny day’, ‘https://i1.wp.com/ladnow.com/wp-content/uploads/2018/11/offensive-dank-memes-2.jpg?resize=1024%2C1024&ssl=1’,’ 'amazinguq'’,50),
+(‘beach mode’, ‘http://californiamemes.com/wp-content/uploads/2019/09/24-Dank-Memes-Reddit-1.jpg’,’ 'amazinguc'’,40),
+(‘no way jose’, ‘https://i.ytimg.com/vi/gc9TI7ISosU/maxresdefault.jpg’,’ 'amazingub'’,150),
 (‘beat on the beat’, ‘https://i.imgur.com/Fq1lMbo.png’,’ 'amazinguw'’,10),
 (‘wowza’, ‘https://i.imgur.com/Fq1lMbo.png’,’ 'amazingut'’,924)
 ;
