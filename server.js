@@ -31,4 +31,10 @@ app.get('/uploadPage', function(req, res){
   });
 });
 
+app.get('/signup', function(req,res){
+  res.render('signup', {
+    title: 'signup page',
+  });
+});
+
 app.listen(3000);
