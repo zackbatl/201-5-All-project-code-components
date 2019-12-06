@@ -76,7 +76,7 @@ html
         h1(style='font-variant:small-caps') You gotta sign up buD
       .transbox
         center
-          form(action='/signup', method='post')
+          form(action='\signup', method='post', id='replace')
             label(for='uname') Username:
             input(type='text', name='uname', placeholder='John_Doe', title='Username', autofocus='', required='')
             br
@@ -86,3 +86,13 @@ html
             br
             button.subbutton(type='submit', style='margin-left:42px;margin-right:20px') Sign Up
             a.signupb(href='homePage') Home
+            br
+            br
+          //- script
+          //-   - if(data)
+          //-     for item in data
+          //-       if(item.username)
+          //-         p(style='font-variant:small-caps') " + 
+            //- form(action='/signup/post')
+            //- H2(style='font-variant:small-caps') Paragraph
+
