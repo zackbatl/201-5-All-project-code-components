@@ -12,7 +12,6 @@ CREATE TABLE Users (
 
 CREATE TABLE user_memes(
   Id SERIAL PRIMARY KEY,
-  img IMAGE,
   title TEXT,
   src TEXT,
   tags TEXT[],
