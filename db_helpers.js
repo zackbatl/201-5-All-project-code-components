@@ -31,12 +31,13 @@ pop_likes(id){
 inc_likes(id){ // uses incoming image id to increment likes in data base
   var current = pop_likes(id); // grabs current value out of database
   current++;
-  
+
+  var btID = id + 'changeNumberBounded';
   var query = 'UPDATE user_memes SET dankScore =' + current + ' WHERE img_id =' + id + ';'
 
   db.any(query)
     .then(function(rows){
-      // do we need to update the HTML here aswell or its that already handled?
+      document.getElementById(btID).innerHTML = current;// do we need to update the HTML here aswell or its that already handled?
     })
     .catch(function(err){
       console.log("error inc likes", err);
