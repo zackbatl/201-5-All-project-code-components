@@ -15,7 +15,6 @@ CREATE TABLE user_memes(
   title TEXT,
   src TEXT,
   tags TEXT[],
-  upload_time DATETIME,
   dankScore INT
 );
 
