@@ -58,6 +58,25 @@ find_pop(){ // returns array of image_ids of top ten in like count
 }
 
 
+find_trending(){
+  var img_ids = [];
+  var current_datetime = new Date();
+  var query = 'SELECT img_id FROM user_memes WHERE  ORDER BY dankScore DESC LIMIT 10' // SLOW AND BAD
+  var i;
+
+  db.any(query)
+    .then(function(rows){
+      for(i=0;i<10;i++){
+        img_ids[i] = rows[i];
+      }
+      return img_ids;
+    })
+    .catch(function(err){
+      console.log('error in find_trending', err);
+    })
+}
+
+
 create_card(id, title, src, alt){ // generates defult cards for all img_ids
   var count = pop_likes(id);
 
@@ -75,6 +94,7 @@ create_card(id, title, src, alt){ // generates defult cards for all img_ids
   card += '</div>\n';
   card += '</center>';
 
+  return card;
 }
 
 search(input){ // returns array of image ids from images with matching tabs
