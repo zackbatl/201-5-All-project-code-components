@@ -1,4 +1,121 @@
-button.btn.btn-success(onclick='updateValueByNumBounded(1)') D A N K
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
+    script(src='https://kit.fontawesome.com/a076d05399.js')
+    link(href='https://fonts.googleapis.com/css?family=Permanent+Marker:400', rel='stylesheet', type='text/css')
+    title Memento
+  body(style="background-image: url('https://media.giphy.com/media/JrTMRGVbcriWWGtpYs/giphy.gif');")
+    style.
+      body {
+      background-image: url('img_girl.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      }
+    //
+      Creating the non-sticky horizontal navbar. Has a search bar, login button, signup button(fa-user icon), and profile button
+    div
+      nav.navbar.navbar-expand-sm.justify-content-end
+        ul.navbar-nav
+          li.nav-item
+            form.form-inline(method='GET', name='searchbar', style='margin-right:30px')
+              input.form-control.mr-sm-2(type='text', placeholder='Search')
+              button.btn(style='color:teal;border-color:teal', type='submit') Search
+          li
+            a.nav-link(href='signup.html', style='color:teal') Sign Up
+          li.nav-item
+            a.nav-link.fa.fa-user(href='#profile', style='font-size:20px;color:teal')
+          li.nav-item
+            button.btn.btn-bg-black(type='button', style='color:teal', data-toggle='modal', data-target='#popUpWindow') Login
+            #popUpWindow.modal.fade
+              .modal-dialog
+                .modal-content.border-2.border-light(style='background-color:black')
+                  .modal-header
+                    h3.modal-title(style='color:white;') Log In
+                    button.close(type='button', data-dismiss='modal', style='color:white') ×
+                  .modal-body
+                    form(role='form')
+                      .form-group
+                        input.form-control(type='email', placeholder='Email')
+                      .form-group
+                        input.form-control(type='password', placeholder='Password')
+                      button.btn.btn-primary.btn-block Submit
+                  .modal-footer
+                    a(href='signup') Sign Up
+    .kir
+      h1.kir-r1 Memento
+      h2.kir-r2 The Dankest Memes
+    style(type='text/css').
+      .kir {
+      color: #d44b15;
+      text-align: center;
+      font-size: 1em;
+      font-family: Permanent Marker, serif;
+      padding: 7em 0em 13em;
+      }
+      .kir-r1 {
+      line-height: 1em;
+      text-align: center;
+      font-size: 10em;
+      font-weight: 100;
+      color: #fff;
+      }
+      .kir-r2 {
+      line-height: 1em;
+      margin-top: -2em;
+      font-size: 5.5em;
+      }
+    style.
+      .vl {
+      border-right: 2px solid lightgrey;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      height: 700px;
+      /*position: absolute;*/
+      }
+    //
+      Example cards/content for the homepage.
+
+
+
+br
+center
+  .card.bg-dark.text-white(style='width:400px')
+    center
+      h4.card-title LOL
+    img.center(src='https://i1.wp.com/ladnow.com/wp-content/uploads/2018/11/offensive-dank-memes-2.jpg?resize=1024%2C1024&ssl=1' alt='Flowers in Chania' width='400' height='400')
+    .card-body
+      center
+        button.btn.btn-success(onclick='updateValueByNumBounded(1)') D A N K
+        span#changeNumberBounded 0
+
+        script.
+          function updateValueByNumBounded(changeBy){
+          var number = document.getElementById("changeNumberBounded").innerHTML;
+          number= parseInt(number) + changeBy;
+          if(number > 10)
+          {
+          number = 1;
+          }
+          document.getElementById("changeNumberBounded").innerHTML = number;
+          }
+
+
+br
+center
+  .card.bg-dark.text-white(style='width:400px')
+    center
+      h4.card-title This is me
+    img.center(src='https://piximus.net/media2/48518/fresh-dank-memes-to-offend-and-amuse-you-2.jpg' alt='Flowers in Chania' width='400' height='400')
+    .card-body
+      center
+        button.btn.btn-success(onclick='updateValueByNumBounded(1)') D A N K
         span#changeNumberBounded 0
 
         script.
@@ -11,3 +128,106 @@ button.btn.btn-success(onclick='updateValueByNumBounded(1)') D A N K
           }
           document.getElementById("changeNumberBounded").innerHTML = number;
           }
+br
+center
+  .card.bg-dark.text-white(style='width:400px')
+    center
+      h4.card-title say no kids
+    img.center(src='http://www.wheninmanila.com/wp-content/uploads/2017/01/sinulog-dank-memes-10.png' alt='Flowers in Chania' width='400' height='400')
+    br
+    .card-body
+      center
+       button.btn.btn-success(onclick='updateValueByNumBounded(1)') D A N K
+        span#changeNumberBounded 0
+
+        script.
+          function updateValueByNumBounded(changeBy){
+          var number = document.getElementById("changeNumberBounded").innerHTML;
+          number= parseInt(number) + changeBy;
+          if(number > 1)
+          {
+          number = 1;
+          }
+          document.getElementById("changeNumberBounded").innerHTML = number;
+          }
+br
+center
+  .card.bg-dark.text-white(style='width:400px')
+    center
+      h4.card-title haha funny me me
+    img.center(src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTKMmBOQZSnYsYTsH4faiqaNV4op-pivKUQeKZt4FR9IAT_6cr5A&s' alt='Flowers in Chania' width='400' height='400')
+    .card-body
+      center
+        button.btn.btn-success(onclick='updateValueByNumBounded(1)') D A N K
+        span#changeNumberBounded 0
+
+        script.
+          function updateValueByNumBounded(changeBy){
+          var number = document.getElementById("changeNumberBounded").innerHTML;
+          number= parseInt(number) + changeBy;
+          if(number > 1)
+          {
+          number = 1;
+          }
+          document.getElementById("changeNumberBounded").innerHTML = number;
+          }
+br
+center
+  .card.bg-dark.text-white(style='width:400px')
+    center
+      h4.card-title so anyways i started blasting
+    img.center(src='http://californiamemes.com/wp-content/uploads/2019/09/24-Dank-Memes-Reddit-1.jpg' alt='Flowers in Chania' width='400' height='400')
+    .card-body
+      center
+        button.btn.btn-success(onclick='updateValueByNumBounded(1)') D A N K
+        span#changeNumberBounded 0
+
+        script.
+          function updateValueByNumBounded(changeBy){
+          var number = document.getElementById("changeNumberBounded").innerHTML;
+          number= parseInt(number) + changeBy;
+          if(number > 1)
+          {
+          number = 1;
+          }
+          document.getElementById("changeNumberBounded").innerHTML = number;
+          }
+br
+center
+  .card.bg-dark.text-white(style='width:400px')
+    center
+      h4.card-title s m a l l b r a i n
+    img.center(src='https://i.ytimg.com/vi/gc9TI7ISosU/maxresdefault.jpg' alt='Flowers in Chania' width='400' height='400')
+    center
+      button.btn.btn-success(onclick='updateValueByNumBounded(1)') D A N K
+        span#changeNumberBounded 0
+
+        script.
+          function updateValueByNumBounded(changeBy){
+          var number = document.getElementById("changeNumberBounded").innerHTML;
+          number= parseInt(number) + changeBy;
+          if(number > 1)
+          {
+          number = 1;
+          }
+          document.getElementById("changeNumberBounded").innerHTML = number;
+          }
+
+
+
+    //
+      Creating the vertical "sticky" navbar for with trending memes, popular memes, and popular users links, as well as a homepage link(fa-anchor icon)
+    .col-1.vl.fixed-top
+      nav.nav.flex-column
+        ul.navbar-nav(style='margin-top:20px')
+          li.nav-item
+            a.nav-brand(href='homePage.html')
+            a.nav-link(style='color:lightgray;margin-top:20px', href='homePage')
+              img(src='https://i.imgur.com/7zOYnS1.png', alt='Memento', height='42', width='42')
+          li.nav-item
+            a.nav-link(style='color:lightgray;margin-top:20px', href='popMemes') Popular Memes
+          li.nav-item
+            a.nav-link(style='color:lightgray;margin-top:20px', href='videoPage') Video Stream
+          li.nav-item
+            a.nav-link(style='color:lightgray;margin-top:20px', href='uploadPage') Upload
+    
