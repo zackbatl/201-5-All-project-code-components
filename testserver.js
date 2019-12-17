@@ -30,12 +30,24 @@ app.get('/videoPage', function(req, res){
     alt0: ,
     src0: ,
   };*/
+
 app.get('/popMemes', function(req, res){
-  //print_popular();
-  var card = create_json_card(find_popular());
-  const card2 = JSON.stringify(card);
-  res.render('popMemes', card2); // pug file need landing zone https://stackoverflow.com/questions/8293363/passing-an-array-to-a-json-object-for-jade-rendering
+	var img_ids = [];
+	img_ids = find_popular();
+	res.render('popMemes' , {
+		title1: get_title(img_ids[0]),
+		src1: get_src(img_ids[0]),
+		title2: get_title(img_ids[1]),
+		src2: get_src(img_ids[1]),
+		title3: get_title(img_ids[2]),
+		src3: get_src(img_ids[2]),
+		title4: get_title(img_ids[3]),
+		src4: get_src(img_ids[3]),
+		title5: get_title(img_ids[4]),
+		src5: get_src(img_ids[4]),
+	});
 });
+
 app.get('/uploadPage', function(req, res){
   res.render('uploadPage', {
     title: 'upload page',
@@ -156,23 +168,5 @@ function get_src(id){
       console.log('error in get_src', err);
     })
 }
-function create_json_card(var img_ids){ // returns array of json card objects 
-  var cardarray = [];
-  var i;
-  
-  if (img_ids.length == 0){
-    console.log('no images found!');
-    return;
-  }
-  
-  for (i = 0; i<img_ids.length; i++){
-    var id = img_id[i];
-    var card = {
-      'title' : get_title(id),
-      'src' : get_src(id),
-    }
-   cardarray.push(card);
-  }
-  return cardarray;
-}
+
 app.listen(PORT); 
