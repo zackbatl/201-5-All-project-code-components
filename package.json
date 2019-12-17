@@ -1,5 +1,20 @@
-The wanderers
 {
-  "name": "my-awesome-package",
-  "version": "1.0.0"
+  "name": "201-5-all-project-code-components-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs-lint": "^0.3.0",
+    "express": "^4.17.1",
+    "pg-promise": "^9.3.6",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
 }
