@@ -136,21 +136,22 @@ function get_src(id){
 }
 
 function create_json_card(){
-  var img_ids = find_popular();
-  var alt = 'alt';
-  var title = 'title';
-  var src = 'src';
+  var img_ids = [];
+  var cardarray = [];
   var i;
-  var card = {};
+  
+  img_ids = find_popular();
+  
   for (i = 0; i<10; i++){
     var id = img_id[i];
-    card += {
-      title + i.toString() : get_title(id);
-      src + i.toString() : get_src(id)
+    var card += {
+      'title' + i.toString() : get_title(id);
+      'src' + i.toString() : get_src(id)
     }
+   cardarray.push(card);
   }
 
-  return card;
+  return cardarray;
 }
 
 app.listen(3000);
