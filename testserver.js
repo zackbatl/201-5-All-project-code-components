@@ -38,48 +38,12 @@ app.get('/videoPage', function(req, res){
     alt0: ,
     src0: ,
 
-    title1: ,
-    alt1: ,
-    src1: ,
-
-    title2: ,
-    alt2: ,
-    src2: ,
-
-    title3: ,
-    alt3: ,
-    src3: ,
-
-    title4: ,
-    alt4: ,
-    src4: ,
-
-    title5: ,
-    alt5: ,
-    src5: ,
-
-    title6: ,
-    alt6: ,
-    src6: ,
-
-    title7: ,
-    alt7: ,
-    src7: ,
-
-    title8: ,
-    alt8: ,
-    src8: ,
-
-    title9: ,
-    alt9: ,
-    src9: ,
-
   };*/
 
 app.get('/popMemes', function(req, res){
   //print_popular();
   var card2 = create_json_card(find_popular());
-  res.render('popMemes', card2);
+  res.render('popMemes', card2); // pug file need landing zone
 });
 
 app.get('/uploadPage', function(req, res){
@@ -200,7 +164,12 @@ function create_json_card(var img_ids){
   var cardarray = [];
   var i;
   
-  for (i = 0; i<10; i++){
+  if (img_ids.length == 0){
+    console.log('no images found!');
+    return;
+  }
+  
+  for (i = 0; i<img_ids.length; i++){
     var id = img_id[i];
     var card = {
       'title' + i.toString() : get_title(id);
