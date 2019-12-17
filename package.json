@@ -2,7 +2,7 @@
   "name": "201-5-all-project-code-components-master",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "testserver.js",
   "dependencies": {
     "body-parser": "^1.19.0",
     "ejs-lint": "^0.3.0",
