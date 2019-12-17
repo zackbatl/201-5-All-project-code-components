@@ -42,7 +42,8 @@ app.get('/videoPage', function(req, res){
 
 app.get('/popMemes', function(req, res){
   //print_popular();
-  var card2 = create_json_card(find_popular());
+  var card = create_json_card(find_popular());
+  const card2 = JSON.stringify(card);
   res.render('popMemes', card2); // pug file need landing zone
 });
 
