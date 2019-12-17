@@ -78,7 +78,7 @@ app.get('/videoPage', function(req, res){
 
 app.get('/popMemes', function(req, res){
   //print_popular();
-  var card2 = create_json_card();
+  var card2 = create_json_card(find_popular());
   res.render('popMemes', card2);
 });
 
@@ -154,7 +154,7 @@ app.get('/search' , function(req, res){
 
 function find_popular(){ // returns array of image_ids of top ten in like count
   var img_ids = [];
-  var query = 'SELECT img_id FROM user_memes ORDER BY dankScore DESC LIMIT 10' // SLOW AND BAD
+  var query = 'SELECT id FROM user_memes ORDER BY dankScore DESC LIMIT 10' // SLOW AND BAD
   var i;
 
   db.any(query)
@@ -196,12 +196,9 @@ function get_src(id){
     })
 }
 
-function create_json_card(){
-  var img_ids = [];
+function create_json_card(var img_ids){
   var cardarray = [];
   var i;
-  
-  img_ids = find_popular();
   
   for (i = 0; i<10; i++){
     var id = img_id[i];
