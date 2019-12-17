@@ -172,8 +172,8 @@ function create_json_card(var img_ids){ // returns array of json card objects
   for (i = 0; i<img_ids.length; i++){
     var id = img_id[i];
     var card = {
-      'title' : get_title(id);
-      'src' : get_src(id)
+      'title' : get_title(id),
+      'src' : get_src(id),
     }
    cardarray.push(card);
   }
