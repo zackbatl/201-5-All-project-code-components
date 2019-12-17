@@ -143,6 +143,8 @@ app.post('/homePage/login', function(req, res)
 
 });
 
+app.get(
+
 function find_popular(){ // returns array of image_ids of top ten in like count
   var img_ids = [];
   var query = 'SELECT img_id FROM user_memes ORDER BY dankScore DESC LIMIT 10' // SLOW AND BAD
