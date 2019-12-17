@@ -143,7 +143,12 @@ app.post('/homePage/login', function(req, res)
 
 });
 
-app.get(
+app.get('/search' , function(req, res){
+  
+  
+  
+}
+  
 
 function find_popular(){ // returns array of image_ids of top ten in like count
   var img_ids = [];
