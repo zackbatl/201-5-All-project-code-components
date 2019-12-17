@@ -5,9 +5,7 @@ const express = require('express');
 const pug = require('pug');
 const pgp = require('pg-promise);
 var app = express();
-
 const PORT = process.env.PORT || 3000;
-
 const dbConfig = {
   host: 'localhost',
   port: 5432,
@@ -15,50 +13,39 @@ const dbConfig = {
   user: 'postgres',
   password: ''
 }
-
 let db = pgp(dbConfig);
-
 app.set("view engine", "pug");
-
 app.get('/homePage', function(req, res){
   res.render('homePage', {
     title: 'home page',
   });
 });
-
 app.get('/videoPage', function(req, res){
   res.render('videoPage', {
     title: 'video page',
   });
 });
-
-
 /*var card = {
     title0: ,
     alt0: ,
     src0: ,
-
   };*/
-
 app.get('/popMemes', function(req, res){
   //print_popular();
   var card = create_json_card(find_popular());
   const card2 = JSON.stringify(card);
   res.render('popMemes', card2); // pug file need landing zone https://stackoverflow.com/questions/8293363/passing-an-array-to-a-json-object-for-jade-rendering
 });
-
 app.get('/uploadPage', function(req, res){
   res.render('uploadPage', {
     title: 'upload page',
   });
 });
-
 app.get('/signup', function(req,res){
   res.render('signup', {
     title: 'signup page',
   });
 });
-
 app.post('/signup', function(req, res)
 {
   var user = req.body.uname;
@@ -68,7 +55,6 @@ app.post('/signup', function(req, res)
   var insert_data = "INSERT INTO users(username, pwd) VALUES('" + user + "', '" +  pword + "');";
   console.log(user, pword)
   //var query2 = "SELECT COUNT(*) FROM users WHERE user = username;";
-
   db.any(insert_data)
     .then(info =>
     {
@@ -86,6 +72,25 @@ app.post('/signup', function(req, res)
         console.log("Error: ", err);
     })
 });
+
+
+app.get('/searchbar' , function(req, res){
+  var tag = body.parse.search;
+  var query = 'SELECT src, title, COUNT(*) FROM user_memes WHERE <@ ' + tag + ';';
+  db.any(query)
+    .then(info => {
+      res.render('signup', {
+        title: 'signup'
+        num_matches: info[2]
+        src: info[0]
+        img_title: info[1]
+      })
+    })
+    .catch(function(err){
+      console.log("Error: ", err);
+    })
+};
+
 
 
 app.post('/homePage/login', function(req, res)
@@ -107,21 +112,17 @@ app.post('/homePage/login', function(req, res)
   {
     console.log("Error: ", err);
   })
-
 });
-
 app.get('/search' , function(req, res){
   
   
   
 }
   
-
 function find_popular(){ // returns array of image_ids of top ten in like count
   var img_ids = [];
   var query = 'SELECT id FROM user_memes ORDER BY dankScore DESC LIMIT 10' // SLOW AND BAD
   var i;
-
   db.any(query)
     .then(function(rows){
       for(i=0;i<10;i++){
@@ -133,10 +134,8 @@ function find_popular(){ // returns array of image_ids of top ten in like count
       console.log('error in find_trending', err);
     })
 }
-
 function get_title(id){
   var query = 'SELECT title FROM user_memes WHERE id = ' + id + ';';
-
   db.any(query)
     .then(function(rows){
       var title = rows[0];
@@ -146,11 +145,8 @@ function get_title(id){
       console.log('error in get_title', err);
     })
 }
-
-
 function get_src(id){
   var query = 'SELECT src FROM user_memes WHERE id = ' + id + ';';
-
   db.any(query)
     .then(function(rows){
       var src = rows[0];
@@ -160,7 +156,6 @@ function get_src(id){
       console.log('error in get_src', err);
     })
 }
-
 function create_json_card(var img_ids){ // returns array of json card objects 
   var cardarray = [];
   var i;
@@ -178,8 +173,6 @@ function create_json_card(var img_ids){ // returns array of json card objects
     }
    cardarray.push(card);
   }
-
   return cardarray;
 }
-
-app.listen(PORT);
+app.listen(PORT); 
