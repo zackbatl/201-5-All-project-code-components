@@ -1,5 +1,5 @@
 CREATE TABLE user_memes(
-  id SERIAL PRIMARY KEY,
+  img_id SERIAL PRIMARY KEY,
   title TEXT,
   src TEXT,
   tags TEXT[],
@@ -18,4 +18,17 @@ VALUES('nicuu', 'https://piximus.net/media2/48518/fresh-dank-memes-to-offend-and
 ('no way jose', 'https://i.ytimg.com/vi/gc9TI7ISosU/maxresdefault.jpg',150),
 ('beat on the beat', 'https://i.imgur.com/Fq1lMbo.png',10),
 ('wowza', 'https://i.imgur.com/Fq1lMbo.png',924)
+;
+
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  username TEXT,
+  pwd TEXT
+);
+
+INSERT INTO users(username, pwd)
+VALUES('baseballfan198', 'YahtzeeLife420911?'),
+('coolguy45', 'P@ssw0rd'),
+('Ahmed00', 'asaaahDude1!')
 ;
