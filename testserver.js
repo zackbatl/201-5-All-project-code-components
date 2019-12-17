@@ -160,7 +160,7 @@ function get_src(id){
     })
 }
 
-function create_json_card(var img_ids){
+function create_json_card(var img_ids){ // returns array of json card objects 
   var cardarray = [];
   var i;
   
