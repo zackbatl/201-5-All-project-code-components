@@ -9,6 +9,8 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());              
 app.use(bodyParser.urlencoded({ extended: true })); 
 
+const PORT = process.env.PORT || 3000;
+
 const dbConfig = {
 	host: 'localhost',
 	port: 5432,
@@ -103,4 +105,4 @@ app.post('/homePage/login', function(req, res)
 
 });
 
-app.listen(3000);
+app.listen(PORT);
