@@ -6,6 +6,8 @@ const pug = require('pug');
 const pgp = require('pg-promise);
 var app = express();
 
+const PORT = process.env.PORT || 3000;
+
 const dbConfig = {
   host: 'localhost',
   port: 5432,
@@ -213,4 +215,4 @@ function create_json_card(){
   return cardarray;
 }
 
-app.listen(80);
+app.listen(PORT);
