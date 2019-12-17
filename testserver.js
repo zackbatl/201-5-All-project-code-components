@@ -30,9 +30,8 @@ app.get('/videoPage', function(req, res){
   });
 });
 
-app.get('/popMemes', function(req, res){
-  //print_popular();
-  /*var card = {
+
+/*var card = {
     title0: ,
     alt0: ,
     src0: ,
@@ -74,6 +73,9 @@ app.get('/popMemes', function(req, res){
     src9: ,
 
   };*/
+
+app.get('/popMemes', function(req, res){
+  //print_popular();
   var card2 = create_json_card();
   res.render('popMemes', card2);
 });
@@ -144,7 +146,7 @@ function create_json_card(){
   
   for (i = 0; i<10; i++){
     var id = img_id[i];
-    var card += {
+    var card = {
       'title' + i.toString() : get_title(id);
       'src' + i.toString() : get_src(id)
     }
